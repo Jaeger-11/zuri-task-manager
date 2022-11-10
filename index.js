@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 require('dotenv').config();
 const tasks = require('./routes/tasksRoutes')
+const errorHandler = require("./middlewares/errorHandler");
+// Database Connection
 const connectDB = require('./database/connect')
 
 // Middlewares
+app.use(errorHandler)
 app.use(express.json());
 
 // Routes
