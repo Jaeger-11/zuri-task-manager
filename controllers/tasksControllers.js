@@ -4,8 +4,6 @@
 // Edit Task
 // Delete Task
 const Task = require("../models/task");
-const NotFoundError = require("../errors/notFound");
-const badRequest = require("../errors/badRequest");
 
 const getAllTasks = async (req,res) => {
     const tasks = await Task.find({});
