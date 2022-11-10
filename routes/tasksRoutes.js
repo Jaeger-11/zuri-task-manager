@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
     getAllTasks,
+    getTask,
     createTask,
     editTask,
     deleteTask
@@ -10,6 +11,7 @@ const {
 
 router.get('/', getAllTasks);
 router.post('/', createTask);
+router.get('/:id', getTask);
 router.patch('/:id', editTask);
 router.delete('/:id', deleteTask);
 
